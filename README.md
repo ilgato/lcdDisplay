@@ -33,6 +33,17 @@ or a user input can be invoque with the **readUserInput** method
 Lcd3Symbols lcd =new Lcd3Symbols();
 lcd.printLine(lcd.readUserInput());
 ```
+## Structure
+As stated before, each number is broken down to horizontal lines and these horizontal lines are made out of 3 symbols
+
+the 3 **symbols** are stored in a character array `char[] symbols`
+the 7 possible **symbol combinations** for each horizontal line is stored in a String array `String[] symbolLineCombinations`
+A hashtable is used to store the **equivalence** of each number with the horizontal line combinations `Hashtable<Integer, Integer[]> horizontalLineEquivalences`
+
+After changingthe  **symbols** array, **setSymbolLineCombinations** can be called to rewrite the line combinations array (see Test **setSymbolLineCombinationsWithCharInput** fro an example) 
+
+![Image of structure](https://github.com/ilgato/lcdDisplay/blob/master/img/process.png)
+
 
 ### Prerequisites
 
@@ -54,14 +65,14 @@ Lcd3Symbols | 100%(1/1) | 90%(9/10) | 87% (56/64)
 
 every test in the declares a new **lcd3Symbols** object and showcases how to uses the methods 
 
-testOneLinePrint: prints a line 
-testLongLinePrint: test the output for long inputs (overflow)
-getDisplaySize: shows how to get the display size (3x3 by default) 
-setDisplaySize: show how to change the display size
-getSymbols: shows how to get the current symbols 
-setAlternativeSymbols: change the symbols but keeps the symbol combination
-setSymbolLineCombinationsWithCharInput: setting the line symbol combination with a char array  
-SetSymbolLineCombinationsWithStringInput: setting the line symbol combination with a String array
+**testOneLinePrint**: prints a line 
+**testLongLinePrint**: test the output for long inputs (overflow)
+**getDisplaySize**: shows how to get the display size (3x3 by default) 
+**setDisplaySize**: show how to change the display size
+**getSymbols**: shows how to get the current symbols 
+**setAlternativeSymbols**: change the symbols but keeps the symbol combination
+**setSymbolLineCombinationsWithCharInput**: setting the line symbol combination with a char array  
+**SetSymbolLineCombinationsWithStringInput**: setting the line symbol combination with a String array
 
 ## Authors
 
