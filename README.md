@@ -47,11 +47,7 @@ After changingthe  **symbols** array, **setSymbolLineCombinations** can be calle
 
 ### Prerequisites
 
-Java jdk-9.0.4 What things you need to install the software and how to install them
-
-```
-Give examples
-```
+Java jdk-9.0.4 
 
 ## Running the tests
 
