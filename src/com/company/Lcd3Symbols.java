@@ -36,7 +36,7 @@ public class Lcd3Symbols implements Display {
     public String readUserInput() {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String name= null;
-        System.out.println("entre un nombre s'il vouz plait");
+        System.out.println("entrez un nombre s'il vous plait");
         try {
             name = br.readLine();
         } catch (IOException e) {
@@ -71,9 +71,14 @@ public class Lcd3Symbols implements Display {
         }
         String[] cleanedArray = Arrays.stream(lcdLine).filter(Objects::nonNull).toArray(String[]::new);
         lcdLine=cleanedArray;
-        System.out.println(lcdLine[0]);
-        System.out.println(lcdLine[1]);
-        System.out.println(lcdLine[2]);
+        try{
+            System.out.println(lcdLine[0]);
+            System.out.println(lcdLine[1]);
+            System.out.println(lcdLine[2]);
+        }catch (ArrayIndexOutOfBoundsException e){
+            //no numbers entered
+        }
+
         return cleanedArray;
     }
 
